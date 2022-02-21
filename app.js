@@ -24,7 +24,7 @@ app.post('/sign_up', function(req,res){
 	var name = req.body.name;
 	var email =req.body.email;
 	var pass = req.body.password;
-	var phone =req.body.phone;
+	var file =req.body.file;
 
 	var data = {
 		"name": name,

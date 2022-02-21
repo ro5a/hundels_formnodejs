@@ -1,0 +1,25 @@
+{
+  "name": "hundels_formnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ro5a/hundels_formnodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ro5a/hundels_formnodejs/issues"
+  },
+  "homepage": "https://github.com/ro5a/hundels_formnodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2"
+  }
+}

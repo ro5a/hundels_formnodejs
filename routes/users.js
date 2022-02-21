@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
  
 router.post('/add-user', function(req, res, next) {
      
-    req.checkBody('name', 'Name is required').notEmpty()           //Validate name
+    req.assert('name', 'Name is required').notEmpty()           //Validate name
     req.assert('email', 'A valid email is required').isEmail()  //Validate email
   
     var errors = req.validationErrors()

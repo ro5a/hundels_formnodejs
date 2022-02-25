@@ -20,6 +20,7 @@ app.get('/home',auth,(req,res)=>{
 });
 app.post('/add_user',auth,(req,res)=>{
     const s= new User({
+        id:mongoose.Types.ObjectId,
         name:req.body.username,
         username:req.body.name,
         email:req.body.email

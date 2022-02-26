@@ -40,15 +40,26 @@ app.get('/',auth,(req,res)=>{
     res.render('home'); 
 });
 app.post('/add_user',upload.single('u_image') ,(req,res)=>{
-    // const s= new User({
-    //     id:mongoose.Types.ObjectId,
-    //     name:req.body.username, 
-    //     username:req.body.name,
-    //     email:req.body.email
-    // });
-//     s.save();
+    const u= new User({
+        id:mongoose.Types.ObjectId,
+        name:req.body.username, 
+        username:req.body.name,
+        email:req.body.email,
+        image:req.file.filename
+    });
+    u.save((error,result)=>{
+        if(error)
+        res.status(500).send(error.message);
+        else
+        console.log(result);
+
+         
+    });
+    console.log("data inserted successful");
+    res.end();
+ 
 // console.log(req.body);
-res.end();
+
 });
 function auth(req,res,next){
     next();

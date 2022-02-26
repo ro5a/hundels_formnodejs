@@ -49,7 +49,7 @@ app.post('/add_user',upload.single('u_image') ,(req,res)=>{
     });
     u.save((error,result)=>{
         if(error)
-        res.status(500).send(error.message);
+        console.log(error.message);
         else
         console.log(result);
 

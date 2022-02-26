@@ -36,7 +36,7 @@ app.use(express.urlencoded());
 console.log(error);
 }); 
 
-app.get('/home',auth,(req,res)=>{
+app.get('/',auth,(req,res)=>{
     res.render('home'); 
 });
 app.post('/add_user',upload.single('u_image') ,(req,res)=>{
